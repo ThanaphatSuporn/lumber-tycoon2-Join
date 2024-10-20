@@ -6,15 +6,23 @@
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
+local Title = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
 local Serverid = Instance.new("TextBox")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local UIGradient_2 = Instance.new("UIGradient")
 local Join = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local UIGradient_3 = Instance.new("UIGradient")
+local CFrame = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local Teleport = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+local Exit = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 
 --Properties:
 
@@ -31,30 +39,30 @@ Frame.Size = UDim2.new(0.405865192, 0, 0.347222239, 0)
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.27, Color3.fromRGB(233, 110, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(218, 6, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(171, 37, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(247, 7, 255))}
 UIGradient.Parent = Frame
 
-UICorner.Parent = Frame
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(-1.79711805e-07, 0, 0, 0)
+Title.Size = UDim2.new(1.00000012, 0, 0.138461545, 0)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Lumber Tycoon TpWare"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(1, 0, 0.138461545, 0)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "Lumber Tycoon Join Insant"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-UICorner_2.Parent = TextLabel
+UICorner.Parent = Title
 
 Serverid.Name = "Serverid"
 Serverid.Parent = Frame
 Serverid.BackgroundColor3 = Color3.fromRGB(115, 9, 211)
 Serverid.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Serverid.BorderSizePixel = 0
-Serverid.Position = UDim2.new(0.0552174449, 0, 0.285309792, 0)
-Serverid.Size = UDim2.new(0.89221555, 0, 0.192307696, 0)
+Serverid.Position = UDim2.new(0.0139959557, 0, 0.323771328, 0)
+Serverid.Size = UDim2.new(0.411934763, 0, 0.192307696, 0)
 Serverid.Font = Enum.Font.SourceSansBold
 Serverid.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Serverid.PlaceholderText = "serverid / Jobid"
@@ -64,7 +72,7 @@ Serverid.TextScaled = true
 Serverid.TextSize = 14.000
 Serverid.TextWrapped = true
 
-UICorner_3.Parent = Serverid
+UICorner_2.Parent = Serverid
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.27, Color3.fromRGB(233, 110, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(218, 6, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(171, 37, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(247, 7, 255))}
 UIGradient_2.Parent = Serverid
@@ -74,8 +82,8 @@ Join.Parent = Frame
 Join.BackgroundColor3 = Color3.fromRGB(114, 9, 209)
 Join.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Join.BorderSizePixel = 0
-Join.Position = UDim2.new(0.0538922139, 0, 0.550000012, 0)
-Join.Size = UDim2.new(0.89221555, 0, 0.192307696, 0)
+Join.Position = UDim2.new(0.0146335727, 0, 0.55384618, 0)
+Join.Size = UDim2.new(0.411297172, 0, 0.192307696, 0)
 Join.Font = Enum.Font.SourceSansBold
 Join.Text = "Join"
 Join.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -83,14 +91,72 @@ Join.TextScaled = true
 Join.TextSize = 14.000
 Join.TextWrapped = true
 
-UICorner_4.Parent = Join
+UICorner_3.Parent = Join
 
 UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.27, Color3.fromRGB(233, 110, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(218, 6, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(171, 37, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(247, 7, 255))}
 UIGradient_3.Parent = Join
 
+CFrame.Name = "CFrame"
+CFrame.Parent = Frame
+CFrame.BackgroundColor3 = Color3.fromRGB(115, 9, 211)
+CFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CFrame.BorderSizePixel = 0
+CFrame.Position = UDim2.new(0.569505811, 0, 0.323771328, 0)
+CFrame.Size = UDim2.new(0.411934763, 0, 0.192307696, 0)
+CFrame.Font = Enum.Font.SourceSansBold
+CFrame.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+CFrame.PlaceholderText = "CFrame(x,y,z)"
+CFrame.Text = ""
+CFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
+CFrame.TextScaled = true
+CFrame.TextSize = 14.000
+CFrame.TextWrapped = true
+
+UICorner_4.Parent = CFrame
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.27, Color3.fromRGB(233, 110, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(218, 6, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(171, 37, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(247, 7, 255))}
+UIGradient_4.Parent = CFrame
+
+Teleport.Name = "Teleport"
+Teleport.Parent = Frame
+Teleport.BackgroundColor3 = Color3.fromRGB(114, 9, 209)
+Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.BorderSizePixel = 0
+Teleport.Position = UDim2.new(0.570143461, 0, 0.55384618, 0)
+Teleport.Size = UDim2.new(0.411297172, 0, 0.192307696, 0)
+Teleport.Font = Enum.Font.SourceSansBold
+Teleport.Text = "Join"
+Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teleport.TextScaled = true
+Teleport.TextSize = 14.000
+Teleport.TextWrapped = true
+
+UICorner_5.Parent = Teleport
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.27, Color3.fromRGB(233, 110, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(218, 6, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(171, 37, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(247, 7, 255))}
+UIGradient_5.Parent = Teleport
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(144, 17, 255)
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.920615256, 0, 0, 0)
+Exit.Size = UDim2.new(0.078517288, 0, 0.138461545, 0)
+Exit.Font = Enum.Font.SourceSansBold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+UICorner_6.Parent = Exit
+
+UICorner_7.Parent = Frame
+
 -- Scripts:
 
-local function WSRE_fake_script() -- Frame.SmoothDrag 
+local function GRXRW_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Drag = script.Parent
@@ -133,24 +199,35 @@ local function WSRE_fake_script() -- Frame.SmoothDrag
 		end)
 	
 end
-coroutine.wrap(WSRE_fake_script)()
-local function NZTTUG_fake_script() -- Frame.LocalScript 
+coroutine.wrap(GRXRW_fake_script)()
+local function NKXXNXW_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Serverid = script.Parent.Serverid
 	
 	script.Parent.Join.MouseButton1Click:Connect(function()
-		if Serverid ~= "" then
-			game:GetService("TeleportService"):TeleportToPlaceInstance(13822889, Serverid.Text, game.Players.LocalPlayer)
+		if Serverid.Text ~= "" then
+			local server = game:GetService("TeleportService"):TeleportToPlaceInstance(13822889, Serverid.Text, game.Players.LocalPlayer)
 		end
 	end)
+	
+	local CFrames = script.Parent.CFrame
+	
+	script.Parent.Teleport.MouseButton1Click:Connect(function()
+		if CFrames.Text ~= "" then
+			local position = Vector3.new(tonumber(CFrames.Text:match("([^,]+)")), tonumber(CFrames.Text:match(",([^,]+)")), tonumber(CFrames.Text:match(",([^,]+)$")))
+			game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
+		end
+	end)
+	
+	
 end
-coroutine.wrap(NZTTUG_fake_script)()
-local function BQLML_fake_script() -- ScreenGui.if  
-	local script = Instance.new('LocalScript', ScreenGui)
+coroutine.wrap(NKXXNXW_fake_script)()
+local function AOWYSZN_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
 
-	if game.PlaceId ~= 13822889 then
-		game.Players.LocalPlayer:Kick("This game Doesnt support")
-	end
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
 end
-coroutine.wrap(BQLML_fake_script)()
+coroutine.wrap(AOWYSZN_fake_script)()
