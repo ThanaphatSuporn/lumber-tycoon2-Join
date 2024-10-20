@@ -90,7 +90,7 @@ UIGradient_3.Parent = Join
 
 -- Scripts:
 
-local function DNJE_fake_script() -- Frame.SmoothDrag 
+local function WSRE_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Drag = script.Parent
@@ -133,8 +133,8 @@ local function DNJE_fake_script() -- Frame.SmoothDrag
 		end)
 	
 end
-coroutine.wrap(DNJE_fake_script)()
-local function YVLWMDH_fake_script() -- Frame.LocalScript 
+coroutine.wrap(WSRE_fake_script)()
+local function NZTTUG_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Serverid = script.Parent.Serverid
@@ -145,4 +145,12 @@ local function YVLWMDH_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YVLWMDH_fake_script)()
+coroutine.wrap(NZTTUG_fake_script)()
+local function BQLML_fake_script() -- ScreenGui.if  
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	if game.PlaceId ~= 13822889 then
+		game.Players.LocalPlayer:Kick("This game Doesnt support")
+	end
+end
+coroutine.wrap(BQLML_fake_script)()
