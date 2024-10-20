@@ -28,6 +28,7 @@ local UICorner_7 = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(152, 26, 255)
@@ -125,7 +126,7 @@ Teleport.BorderSizePixel = 0
 Teleport.Position = UDim2.new(0.570143461, 0, 0.55384618, 0)
 Teleport.Size = UDim2.new(0.411297172, 0, 0.192307696, 0)
 Teleport.Font = Enum.Font.SourceSansBold
-Teleport.Text = "Join"
+Teleport.Text = "Teleport"
 Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
 Teleport.TextScaled = true
 Teleport.TextSize = 14.000
@@ -156,7 +157,7 @@ UICorner_7.Parent = Frame
 
 -- Scripts:
 
-local function GRXRW_fake_script() -- Frame.SmoothDrag 
+local function VQZCBWW_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Drag = script.Parent
@@ -199,8 +200,8 @@ local function GRXRW_fake_script() -- Frame.SmoothDrag
 		end)
 	
 end
-coroutine.wrap(GRXRW_fake_script)()
-local function NKXXNXW_fake_script() -- Frame.LocalScript 
+coroutine.wrap(VQZCBWW_fake_script)()
+local function HPOMD_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Serverid = script.Parent.Serverid
@@ -215,19 +216,31 @@ local function NKXXNXW_fake_script() -- Frame.LocalScript
 	
 	script.Parent.Teleport.MouseButton1Click:Connect(function()
 		if CFrames.Text ~= "" then
-			local position = Vector3.new(tonumber(CFrames.Text:match("([^,]+)")), tonumber(CFrames.Text:match(",([^,]+)")), tonumber(CFrames.Text:match(",([^,]+)$")))
-			game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
+			local values = {}
+			for value in CFrames.Text:gmatch("[^,]+") do
+				table.insert(values, tonumber(value))
+			end
+			if #values == 12 then
+				local position = Vector3.new(values[1], values[2], values[3])
+				local matrix = CFrame.new(
+					values[1], values[2], values[3],
+					values[4], values[5], values[6],
+					values[7], values[8], values[9],
+					values[10], values[11], values[12]
+				)
+				game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = matrix
+			end
 		end
 	end)
 	
 	
 end
-coroutine.wrap(NKXXNXW_fake_script)()
-local function AOWYSZN_fake_script() -- Exit.LocalScript 
+coroutine.wrap(HPOMD_fake_script)()
+local function ODGLEI_fake_script() -- Exit.LocalScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(AOWYSZN_fake_script)()
+coroutine.wrap(ODGLEI_fake_script)()
